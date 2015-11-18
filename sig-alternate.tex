@@ -79,7 +79,7 @@
 % without further effort on your part as the last section in
 % the body of your article BEFORE References or any Appendices.
 
-\numberofauthors{3} %  in this sample file, there are a *total*
+\numberofauthors{2} %  in this sample file, there are a *total*
 % of EIGHT authors. SIX appear on the 'first-page' (for formatting
 % reasons) and the remaining two appear in the \additionalauthors section.
 %
@@ -108,12 +108,6 @@ Nikolaj Schaldemose Reibke\\
        \affaddr{5000, Odense}\\
        \affaddr{Denmark}\\
        \email{nirei12@student.sdu.dk}
-% 3rd. author
-\alignauthor Lars Th{\o}rv{\"a}ld\\\
-       \affaddr{The Th{\o}rv{\"a}ld Group}\\
-       \affaddr{1 Th{\o}rv{\"a}ld Circle}\\
-       \affaddr{Hekla, Iceland}\\
-       \email{larst@affiliation.org}
 }
 % Just remember to make sure that the TOTAL number of authors
 % is the number that will appear on the first page PLUS the
@@ -135,18 +129,34 @@ Contains abstract
 
 \section{Introduction}
 Doing business as a software company now, and expectedly increasingly in the future, needs to deal with increasing rapid changes in technology and competition. For a company to endure these changes in the business environment finding new strategies to distinguish themselves from their competitors is essential.\cite{stefan:valuebased}       
+In order to accommodate these different company strategies and improve productivity a number of different software development processes have been developed. 
+Throughout the last 60 years of software development, 5 different development processes categories have been created to accommodate the different business strategies and thereby improving the efficiency of the company. These categories can be seen in Figure \ref{fig:states}, arranged with oldest first.
 
-Throughout the last 60 years of software development, 5 different development processes categories have been created to accommodate the different business strategies and thereby improving the efficiency of the company. 
-These categories are:
+\begin{figure}
+\caption{Development processes view as states}
 \begin{enumerate}
 \item Traditional Development
 \item Agile Development
 \item Continues Deployment 
 \item Continues Experimentation in value-oriented Software Development
 \end{enumerate}
+\label{fig:states}
+\end{figure}
 
+The general trend from the first to the last category is that the development process become more and more agile and iterative. This general trend can be view as attempts to overcome a number of general uncertainties or risk in software development, see Figure \ref{fig:states}.
+As an example, take the jump from the traditional Waterfall to a agile framework like Scrum where the main purpose is to overcome these risks by using a more iterative and incremental approach\cite{sutherland:scrum}.
+\begin{figure}
+\caption{General risks and uncertainties in Software Development}
+\begin{itemize}
+\item Changes in requirements
+\item Risk of having the wrong requirements
+\item Risk of missing requirements
+\item Risk of not being the first
+\end{itemize}
+\label{fig:generalrisks}
+\end{figure}
 
-On the last state of development is the value-oriented software development and its use of Continuous Experimentation to improve quality management.
+On the last state of development is the value-oriented software development and its use of Continuous Experimentation to improve quality management. 
 
 \subsection{Value-oriented Software Development}
 Value-oriented or Value-based Software Development (VBSE) focuses on reducing the waste of resources on activities with negative return investments. For instance, Boehm (2006) argues that the wasted effort by extensive testing could be as high as \$300 billion per year\cite{stefan:valuebased}.
@@ -156,16 +166,17 @@ VBSE originates from the "4+1" theorem represented on Figure \ref{fig:fouronethe
 The success-critical stakeholder (SCS) Win-Win theory at the centrer of the figure is used to decide which values are important and describes how to assure their success and realisation. The output of the additional four theories is the input for this decision making. Put simply, identify the values and determine their importance for the SCS. Further analyse how the identified SCS' values affect the decision making. Find and evaluate the dependencies and their impact on the values. Plan to adapt to changes and thereby control the realization of the value.\cite{stefan:valuebased}
 
 \begin{figure}
-\centering
 \caption{The "4+1" theorem, by Boehm}
+\centering
 \includegraphics[scale=0.6]{4+1theorem}
 \label{fig:fouronetheorem}
 \end{figure} 
 
-The essence of VBSE and were it distinguish itself from the previous processes and strategies is that it does not operate with the same values-neutral approach. Where previous strategies treated every requirement, use case or defect with equal importance the VBSE seek to find a mutually satisfactory set of objectives for SCS' and company, and work these into a system.
+The essence of VBSE and were it distinguish itself from the previous processes and strategies is that it does not operate with the same values-neutral approach. Where previous strategies treated every requirement, use case or defect with equal importance the VBSE seek to find a mutually satisfactory set of objectives for SCS' and company, and work these into a system. In other words, the value created from different requirements, use case, quality factors ect. are not of equal in size or importance. The size and importance of a value is defined by the success-critical stakeholders. Further, a item representing something valuable is not to be implemented if it is not important for the success of the enterprise. Derived from the W theory\footnote{The Win-Win theory of the "4+1" theory}, a successful enterprise is where the SCS becomes winners. 
 
-This way of thinking manifests itself in a number of activities, which tries to maximize the value created on different levels of the engineering practices.
-These activities are:
+This way of thinking manifests itself in a number of activities, which tries to maximize the value created on different levels of the engineering practices. These activities are can be seen in Figure \ref{fig:vbseActivities}
+\begin{figure}
+\caption{Activities in Value-Oriented Software development}
 \begin{itemize}
 \item Value-based Requirement Engineering
 \item Value-based Architecting
@@ -177,6 +188,11 @@ These activities are:
 \item Value-based Principles and Practices addressing
 \item Value-based Quality Management
 \end{itemize} 
+\label{fig:vbseActivities}
+\end{figure}
+
+\paragraph{Advantages}
+\paragraph{Disadvantages}
 
 \paragraph{Quality management in VBSE}
 Quality management in VBSE is focussing on prioritizing desired quality factors with respect to the stakeholders' value propositions. A crucial part of the quality management in VBSE is to identify what these factors are. Since software quality is multidimensional, it follows that the quality of a system can acceptable in one situation is not in odder. For instance a making a system with high efficiency but unknown or low reliability might be sufficient for a smart phone game application but as a system for a security system for a space program it is a no go. Further since quality costs money, narrowing down the which qualities really are important for stakeholders is a way to reduce wasted effort and money. In VBSE the quality management is concerned with identifying the most important qualities which should characterize the system and making sure that these are achieved to the extend where it meets the requirements of the stakeholders and no more. 
@@ -184,6 +200,17 @@ The main problem in VBSE is how to find out which quality factors are important,
 
 Further it is a problem in VBSE to verify that the quality goal identified is actually the correct once. Having a cap between the identified desired quality need and the \textit{true} quality need can lead to a business failure. 
 Traditional development proposes to make studies of the user and the environment of the system to give evidence for a verification or rejection of a set of quality goal. But these studies can be costly and misleading, since the user does not always know what they want. Nor does a assessment of the environment prof whether one solution is better than another. Without any hard evidence, quality management in VBSE and other strategies can be a nasty business. Continuous Experimentation can be applied in this situation to reduce this risk of having wrong quality requirement. 
+Continuous Experimentation is a strategy which is build on top of Continuous deployment.  
+
+\subsection{Continuous Delivery and Deployment}
+Continuous Delivery and Continuous Deployment are somewhat similar.
+Continuous Delivery is a software engineering process focussing on a getting shorter development cycles, faster delivery and feedback, see Figure \ref{fig:deliverydeploment}. This is achieved by automating test and integration in a testing environment. Thereby making only the development and acceptance test manual. In continuous deployment the hole process after development is automated until the deployment in the production environment. There might still be manual work to do in the different tasks, like writing additional test, but the process of between the steps are completely automated.  
+
+\begin{figure}
+\caption{Continuous Delivery and Continuous Deployment in short}
+\includegraphics[scale=0.37]{DeliveryandDeployment}
+\label{fig:deliverydeploment}
+\end{figure}
 
 \subsection{Continuous Experimentation}
 
