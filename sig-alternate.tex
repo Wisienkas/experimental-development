@@ -115,20 +115,18 @@ Nikolaj Schaldemose Reibke\\
 
 \maketitle
 \begin{abstract}
-Contains abstract
-\end{abstract}
+This paper discusses Value-Oriented Software Development and how to improve on its drawbacks by incorporating Continuous Experimentation. The paper will take its starting point in the evolution of software processes and here find a a set of common risks driving this evolution towards more specialized and efficient processes. From there it will describe the basics of Value-Oriented Software Development. After this introduction to Value-Oriented Development a description of experimental development will follow. In addition, in order to understand Continuous Experimentation there will be a short description of Continuous- Development and Deployment. Further, due to Continuous Experimentations similarities with Lean Development, there will be a brief introduction to this.
 
-% A category with the (minimum) three required fields
-\category{H.4}{Information Systems Applications}{Miscellaneous}
-%A category including the fourth, optional field follows...
-\category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+This paper will identify and discuss the downsides of Value-Oriented Software Development. In relation to this will it elaborate on appliance of activities from Continuous Experimentation to compensate for these drawbacks.
+\end{abstract}
 
 \terms{
   Continuouse Experimentation,
   Value-oriented Software Development, 
   Value-based Software Development,
   Lean Software Development,
-  Continous Delivery
+  Continous Delivery,
+  Continuous Deployment
 }
 
 \keywords{
@@ -137,17 +135,18 @@ Contains abstract
   Value-based Software Development,
   Lean Software Development,
   Continous Delivery,
+  Continuous Deployment,
   Software Development,
-  Project Management
+  Project Management,
+  Development processes,
+  Development Strategies
 }
 
 \section{Introduction}
 Doing business as a software company now, and expectedly increasingly in the future, needs to deal with increasing rapid changes in technology and competition. For a company to endure these changes in the business environment finding new strategies to distinguish themselves from their competitors is essential.\cite{stefan:valuebased}       
 In order to accommodate these different company strategies and improve productivity a number of different software development processes have been developed. 
-Throughout the last 60 years of software development, 5 different development processes categories have been created to accommodate the different business strategies and thereby improving the efficiency of the company. These categories can be seen in Figure \ref{fig:states}, arranged with oldest first.
+Throughout the last 60 years of software development, 5 different development processes categories have been created to accommodate the different business strategies and thereby improving the efficiency of the company. These categories can be seen below, arranged with oldest first.
 
-\begin{figure}
-\caption{Development processes view as states}
 \begin{enumerate}
 \item \textit{Traditional Development.} Development processes like the waterfall model.
 \item \textit{Agile Development.} Spans over development models like UP, RUP, Scrum, the V-Model and the spiral model.
@@ -155,21 +154,17 @@ Throughout the last 60 years of software development, 5 different development pr
 \item \textit{Lean Software Development.} Development Processs which has become popular as speed has become more imporant. Additionally it focusses on manimizing loss in Software Development.
 \item \textit{Continues Experimentation in value-oriented Software Development.} Development processes focussing on creating a minimal viable product through rapid development/delivery processes much like Continuous development.
 \end{enumerate}
-\label{fig:states}
-\end{figure}
 
-The general trend from the first to the last category is that the development process become more and more agile and iterative. This general trend can be view as attempts to overcome a number of general uncertainties or risk in software development, see Figure \ref{fig:states}.
+The general trend from the first to the last category is that the development process become more and more agile and iterative. This general trend can be view as attempts to overcome a number of general uncertainties or risk in software development.
+
 As an example, take the jump from the traditional Waterfall to a agile framework like Scrum where the main purpose is to overcome these risks by using a more iterative and incremental approach\cite{sutherland:scrum}.
-\begin{figure}
-\caption{General risks and uncertainties in Software Development}
+
 \begin{itemize}
 \item \textit{Changes in requirements.} Changes in requirement are \textit{originally} thought of as risk of having "rework" costs, thereby posing the thread of exceeding the budget and potentially making the project a failure. As seen from Figure \ref{fig:vbseActivities} -\textit{Value-based adoption to change}, describing the activities of Value-Oriented Software Development, is there a paradigm shift in the view of these changes.
 \item \textit{Risk of having the wrong requirements.} The risk of the identified set of requirements are wrong. Which can either lead to the developed system not for filling its purpose or the risk of changing requirements.
 \item \textit{Risk of missing requirements.} If the identified set of requirement are lacking other essential requirements. This, depending on how late the missing requirements a discovered, can cause the major changes in the system and thereby introduce big costs to the project, or if the missing requirement are never discovered cause the system to be of on or little use.
 \item \textit{Risk of not being the first.} The risk of the system release being too late. This can happen either by a competitor developing something faster or the organization/user solving the problem by other means.
 \end{itemize}
-\label{fig:generalrisks}
-\end{figure}
 
 On the last state of development is the value-oriented software development and its use of Continuous Experimentation to improve quality management. 
 
@@ -189,9 +184,8 @@ The success-critical stakeholder (SCS) Win-Win theory at the centrer of the figu
 
 The essence of VBSE and were it distinguish itself from the previous processes and strategies is that it does not operate with the same values-neutral approach. Where previous strategies treated every requirement, use case or defect with equal importance the VBSE seek to find a mutually satisfactory set of objectives for SCS' and company, and work these into a system. In other words, the value created from different requirements, use case, quality factors ect. are not of equal in size or importance. The size and importance of a value is defined by the success-critical stakeholders. Further, a item representing something valuable is not to be implemented if it is not important for the success of the enterprise. Derived from the W theory\footnote{The Win-Win theory of the "4+1" theory}, a successful enterprise is where the SCS becomes winners. 
 
-This way of thinking manifests itself in a number of activities, which tries to maximize the value created on different levels of the engineering practices. These activities are can be seen in Figure \ref{fig:vbseActivities}
-\begin{figure}
-\caption{Activities in Value-Oriented Software development}
+This way of thinking manifests itself in a number of activities, which tries to maximize the value created on different levels of the engineering practices. These activities are:
+
 \begin{itemize}
 \item \textit{Value-based Requirement Engineering.} The process of eliciting the success-critical stakeholders for their value proposition with respect to the system. The goal here is to get a mutually satisfactory set of objectives for the system.
 \item \textit{Value-based Architecting.} Designing a achievable architectural solution that captures the objectives for the system. 
@@ -203,8 +197,6 @@ This way of thinking manifests itself in a number of activities, which tries to 
 \item \textit{Value-based adoption to changes.} Most Software engineering strategies view changes in  project requirements or quality factors as "rework costs" or quality costs which should be minimized. Value-based Engineering views these as changes in the environment of technology, markets, organizations and stakeholders. In a world contentiously and rapidly changing, the organization or stakeholder which is best at adopting to changes is the most successful. Since software is the premier technology to changes \cite{boehm:valuebased} Value-based engineering views it as opportunities for competitive success.
 \item \textit{Value-based Quality Management.} Prioritising the desired quality factors in respect of the success-critical stakeholders.
 \end{itemize} 
-\label{fig:vbseActivities}
-\end{figure}
 
 \paragraph{Quality management in VBSE}
 Quality management in VBSE is focussing on prioritizing desired quality factors with respect to the stakeholders' value propositions. A crucial part of the quality management in VBSE is to identify what these factors are. Since software quality is multidimensional, it follows that the quality of a system can acceptable in one situation is not in odder. For instance a making a system with high efficiency but unknown or low reliability might be sufficient for a smart phone game application but as a system for a security system for a space program it is a no go. Further since quality costs money, narrowing down the which qualities really are important for stakeholders is a way to reduce wasted effort and money. In VBSE the quality management is concerned with identifying the most important qualities which should characterize the system and making sure that these are achieved to the extend where it meets the requirements of the stakeholders and no more. 
@@ -416,8 +408,24 @@ hypothesis or not which may make it a candidate for the master version in the ne
 \end{figure}
 
 \section{Discussion}
+In the previous sections, this paper have been looking into a number of different development processes in order to gain the information needed to understand what Continuous Experimentation is about. Further have the paper outlined the process of Continuous Experimentation. The Following sections will highlight some of the drawbacks of Value-oriented development and how Continuous Experimentation can be applied to counter these drawbacks. The first section \textit{Consequences of Value-oriented Software Development} will briefly discuss these drawbacks. 
 
-\subsection{Consequences of Value-oriented Software Development}
+
+\subsection{Consequences of Value-Oriented Software Development}
+Value-Oriented Software Development non-neutral-value understanding of features, quality and system elements, gives project managers a new tool to maximize productiveness and ensure the success of a project. With the ideology of one system value not being equal to another, Value-Oriented Software Development gives the opportunity to focus on the development of what in the system will create the biggest value. Further, will it allow manager to prioritize the different features accordingly to how valuable they are. Lastly, by having a measure on how valuable a given value is the project manager can discard all features where there is no positive return of investment and guide his/hers decisions on what will maximize the value.  
+
+As insinuated in \textit{Value-Oriented Software Development}, does Value-Oriented Software Development impose some risk to the project. 
+Firstly, the method of Value-Oriented Software Development itself poses a risk, because it can be hard to quantitatively calculate and measure the values of different features, components or qualities. This can lead to decision being made on wrong numbers or decisions to be biased or partial. Besides taking a wrong turn based on faulty calculation there is a number of risks in Value-Oriented Development, these are:  
+\begin{itemize}
+\item \textit{The assumptions of the environment and current state wrong.} Having wrongly or incomplete perception of the environment can lead to making the wrong decision and or focus in the development.  
+\item \textit{The gathered set of requirements/features is incomplete.} If the set requirement are incomplete the decision of what creates value in a product will be incomplete as well. Therefore it poses a risk for the project.
+\item \textit{Wrongly identified success-critical stakeholders.} For the Win-Win theory to work, it is a pre requirement that all success-critical stakeholders are identified. If one or more success-critical stakeholder is missing it will introduce the risk of weighting the requirements wrongly. 
+\end{itemize} 
+
+
+
+
+
 \subsection{Synergy of CX and VoSD}
 
 \subsection{Profit!}
