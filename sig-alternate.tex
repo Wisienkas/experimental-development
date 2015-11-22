@@ -117,24 +117,25 @@ Nikolaj Schaldemose Reibke\\
 \begin{abstract}
 This paper discusses Value-Oriented Software Development and how to improve on its drawbacks by incorporating Continuous Experimentation. The paper will take its starting point in the evolution of software processes and here find a a set of common risks driving this evolution towards more specialized and efficient processes. From there it will describe the basics of Value-Oriented Software Development. After this introduction to Value-Oriented Development a description of experimental development will follow. In addition, in order to understand Continuous Experimentation there will be a short description of Continuous- Development and Deployment. Further, due to Continuous Experimentations similarities with Lean Development, there will be a brief introduction to this.
 
-This paper will identify and discuss the downsides of Value-Oriented Software Development. In relation to this will it elaborate on appliance of activities from Continuous Experimentation to compensate for these drawbacks.
+This paper will identify and discuss the downsides of Value-Oriented Software Development. In relation to this will it elaborate on appliance of activities from Continuous Experimentation to compensate for these drawbacks. Lastly will it describe the drawbacks which might come from this approach. 
 \end{abstract}
 
 \terms{
-  Continuouse Experimentation,
+  Continuous Experimentation,
   Value-oriented Software Development, 
   Value-based Software Development,
   Lean Software Development,
-  Continous Delivery,
+  Continuous Delivery,
   Continuous Deployment
 }
 
 \keywords{
-  Continuouse Experimentation, 
+  Continuous Experimentation, 
   Value-oriented Software Development, 
   Value-based Software Development,
+  VBSE,
   Lean Software Development,
-  Continous Delivery,
+  Continuous Delivery,
   Continuous Deployment,
   Software Development,
   Project Management,
@@ -151,7 +152,7 @@ Throughout the last 60 years of software development, 5 different development pr
 \item \textit{Traditional Development.} Development processes like the waterfall model.
 \item \textit{Agile Development.} Spans over development models like UP, RUP, Scrum, the V-Model and the spiral model.
 \item \textit{Continues Development.} Development processes like Continuous Delivery and Continuous Deployment, which focusses on fast and short development cycles and quick a delivery.
-\item \textit{Lean Software Development.} Development Processs which has become popular as speed has become more imporant. Additionally it focusses on manimizing loss in Software Development.
+\item \textit{Lean Software Development.} Development Process which has become popular as speed has become more important. Additionally it focusses on minimizing loss in Software Development.
 \item \textit{Continues Experimentation in value-oriented Software Development.} Development processes focussing on creating a minimal viable product through rapid development/delivery processes much like Continuous development.
 \end{enumerate}
 
@@ -220,7 +221,7 @@ Continuous Delivery is a software engineering process focussing on a getting sho
 
 \subsection{Lean Software Development}
 \label{lean}
-Lean Software Developnment\cite{poppendieck:lean} was developed back in ?? and is based upon the following principles
+The software development process Lean \cite{poppendieck:lean} was is based upon the following principles
 
 \begin{enumerate}
 \item \textit{Eliminate Waste.}
@@ -242,7 +243,7 @@ Waste is anything which does not directly add value upon the product.
 This could be Design diagrams, which is not utilized by the developer or the project manager in any way. 
 It is unused requirements, unused features or features which is not needed right now.
 
-Eliminating Waste is generally avoided by looking at each task done in a timeline for a project
+Eliminating Waste is generally avoided by looking at each task done in a time line for a project
 and find any tasks or part of tasks which doesn't bring any value to the product and can be 
 skipped for further processes or projects.
  
@@ -273,29 +274,29 @@ Back in time it was more valuable to delay software and increase the quality, al
 the right decisions.
 
 Today it it more valuable to move fast as the cost of software has changed to the cost of human hours. 
-These changes in the field has made it more important to elimate waste and deliver as fast as possible 
+These changes in the field has made it more important to eliminate waste and deliver as fast as possible 
 by just fulfilling the required terms.
 As mentioned in \textit{Amplify learning} Lean Software Development have short development cycles which 
 lowers the time until feedback can be gathered. Through fast feedback Lean Development tries to lower 
 the four general risks seen in Figure \ref{fig:generalrisks}.
 
 \paragraph{Empower the team}
-Empower the Team, is for Lean Software Development the process of enlightning the entire team of the 
+Empower the Team, is for Lean Software Development the process of enlightening the entire team of the 
 details of the project and thereby increase the quality by having every developer on the same side. 
 
-These empowerings are archived by having the individual developers talk together in meetings telling
+This empowering are archived by having the individual developers talk together in meetings telling
 about what they have to do, combined charts which shows how the software is improved.
 
 \paragraph{Build integrity in}
 To Build Integrity in, means that it should be possible to extend the software for future requirements 
-as software generally has to adapt to the moving world and additonally be easy to maintain to reduce waste.
+as software generally has to adapt to the moving world and additionally be easy to maintain to reduce waste.
 Lean Software Development encourage the developer to do refactoring both to amplify learning among the 
 developers, but also to keep the code base clean of unused functionality. 
 Additionally the process of refactoring ensures flexibility and lower dependencies between components 
 and modules.  
 
 \paragraph{See the whole}
-The principle `See the whole` covers how to avoid suboptimality in software. 
+The principle `See the whole` covers how to avoid sub-optimality in software. 
 It is described as developers tend to do the features at which, they are specialized into.
 This leads to parts of the systems being really good and other parts to be suboptimal.
 Lean attempts to reduce suboptimal in a product by standardizing different stages in the iterations and 
@@ -310,7 +311,7 @@ The section Continuous Experimentation is mainly grounded in the paper \cite{bow
 The development approach is mainly inspired from Lean Software Development which focus upon 
 the utilization of the budget to earn the most profit.
 
-The Overall concept of Continous Experimentation is to iteratively `Build, Measure Learn` which is
+The Overall concept of Continuous Experimentation is to iteratively `Build, Measure Learn` which is
 decomposed into the following processes: 
 \begin{enumerate}
 \item Assumption
@@ -338,15 +339,15 @@ In the Assumption phase an idea is created, which is a change or extension to th
 \subsubsection{Hypothesis}
 \label{cx:hypothesis}
 In the Hypothesis phase the focus is upon quality metrics which can be measured.
-it it absolute crucial to the whole process that all these quality measures is measureable in order to figure 
+It is absolute crucial to the whole process that all these quality measures is measurable in order to figure 
 out the value of the experiment, and find a direct statistical connection to it. 
 
-In the Hypothesis the goal of the experiment is being described in measureable terms 
+In the Hypothesis the goal of the experiment is being described in measurable terms 
 by these quality measures. 
 
 The quality measures is not only software based, but also user experience is put into the hot seat in this 
 phase, just as Lean Software Development\footnote{\label{see-lean}see section \ref{lean}} where waste 
-is reduced, and value is maximized, the only real measureable value is in the end the user experience. 
+is reduced, and value is maximized, the only real measurable value is in the end the user experience. 
 
 If the user Experience qualities has totally failed, there is no value to the product and therefore there is 
 no product.
@@ -354,12 +355,12 @@ no product.
 \subsubsection{Design Minimal Viable Product}
 \label{cx:design}
 The Design of the Minimal Viable Product is usually done fast and tested following a `Test Driven Development`
-approach, to ensure quality and non-breakability. 
-This is a treat inheritated from Lean Software Development\footnotemark[\ref{see-lean}].
+approach, to ensure quality and robustness. 
+This is a treat inherited from Lean Software Development\footnotemark[\ref{see-lean}].
 
 \subsubsection{Integration}
 \label{cx:integration}
-In order to use Continous Experimentation it is not sufficient to run only one version of software in 
+In order to use Continuous Experimentation it is not sufficient to run only one version of software in 
 production to be successful as it would take too long to test all the parallel experiments which has been
 created and has entered the `Integration` phase. 
 
@@ -370,7 +371,7 @@ A version should be offered to a subset of the users, meaning not all users will
 new feature, but enough to show how it affects the software product.
 
 Using only a subset of the users for an experiment also means that multiple experiments can be tested in 
-parallel to different subsets. For some experiements the subsets might be able to handle a intersection of 
+parallel to different subsets. For some experiments the subsets might be able to handle a intersection of 
 the subsets. 
 
 \subsubsection{Feedback}
@@ -380,8 +381,8 @@ The whole framework of the software system has to support collection of user dat
 the software system is doing in general, but also how experiments differences from the current master version.
 
 The collection of data can be very different depending on the case and the product. 
-For a webshop an experiment for a visual new feature could be tracked by collecting data about the amount 
-of transactions made, what the transactions included and a clipmap of there the users clicked on the page.
+For a web shop an experiment for a visual new feature could be tracked by collecting data about the amount 
+of transactions made, what the transactions included and a clip-map of there the users clicked on the page.
 
 These information would in contrast to the master version, be easily to distinguish from the statistics if 
 the experiment caused any change.
@@ -390,20 +391,20 @@ the experiment caused any change.
 \label{cx:analyse}
 Once data has been collected over a period of time. The collected data will be used to either accept or reject
 the hypothesis. 
-If the data collected has shown that all the quality measures has been met for the experiemnet, 
+If the data collected has shown that all the quality measures has been met for the experiment, 
 the experiment will be added to the master version as it has added value to the product.
 
-On the other hand, if the data collected shows that the experiement has failed to fulfill the hypothesis 
+On the other hand, if the data collected shows that the experiment has failed to fulfil the hypothesis 
 the assumption will be re-evaluated for one of two things as seen in fig. \ref{fig:validation}. 
 \begin{enumerate}
 \item The Experiment will be archived and will not be used
-\item The Experiment will have changed it hypothesis and can then be re-examined in order to fulfill the new 
+\item The Experiment will have changed it hypothesis and can then be re-examined in order to fulfil the new 
 hypothesis or not which may make it a candidate for the master version in the next iteration.
 \end{enumerate}
 
 \begin{figure}
 \centering
-\caption{Workflow of validation in Continuous Development}
+\caption{Work flow of validation in Continuous Development}
 \includegraphics[scale=0.4]{Umlet/ValidateActivity}
 \label{fig:validation}
 \end{figure}
@@ -436,28 +437,28 @@ seen in Section \ref{vosd}.
 
 What is hard in Value-Oriented Software Development is to measure the exact value of a task, given that no
 feedback is given from the end result of the product.
-Here The value is superficilally calculated based on previous known knowledge, but in software no two projects
+Here The value is superficially calculated based on previous known knowledge, but in software no two projects
 are the same and therefore there will be a different value for the same task in a different context. 
 The reason for different values is endless, but a few would be:
 \begin{itemize}
 \item The Stakeholders, The stakeholders might use the software for different purposes and therefore have
-different opinions on the vlaue of this `tool` they are buying.
+different opinions on the value of this `tool` they are buying.
 \item The Developers, For the developers developing the software, they might be experts in the area and able
 make an optimal solution given the requirements. But they might as well be in a new field and therefore 
 not able to create software of the same quality as other would, or developers in future would as technology
 shifts.
-\item Real time, Technology that we wanted to pay a lot of money for 10 years ago, is nearly garanteed to be 
+\item Real time, Technology that we wanted to pay a lot of money for 10 years ago, is nearly guaranteed to be 
 free nowadays, and therefore contains no knowledge.
 \end{itemize}
 
 Value-oriented software development put into the context of Continuous experimentation is however an 
 interesting approach which address the missing property in value-oriented software development of 
 real numbers.
-Given real numbers from real users given the continous experimentation approach, value-oriented software 
+Given real numbers from real users given the continuous experimentation approach, value-oriented software 
 development will be able to prototype their ideas to the users before figuring out the value of these 
 pieces of software.
 
-This interaction has to be refined, but is mostly already handled in continous experimentation using the 
+This interaction has to be refined, but is mostly already handled in continuous experimentation using the 
 lean software development methods. 
 
 In the process of combining the two, the value-oriented software development, could be applied in the lean
@@ -465,17 +466,17 @@ software development part, to increase how the lean software development makes i
 waste.
 \\
 \\
-\textbf{It should be noted} that there is consequences followed by using the continous experimentation. 
-Continous Experimentation use a late decision approach whetever it should keep the software piece by 
+\textbf{It should be noted} that there is consequences followed by using the Continuous Experimentation. 
+Continuous Experimentation use a late decision approach whether it should keep the software piece by 
 actually implementing it beforehand. 
-This is the latests approach possible for deciding. In a perfect world continous experiementation would not
+This is the latests approach possible for deciding. In a perfect world Continuous Experimentation would not
 work better than any other process as it does not gain anything by measuring its value after implementation.
 
 The world is however not perfect which is why the approach works as well as it does, and could benefit 
 a lot of companies in adopting the usage of it, given that they are efficient in doing their work. 
 
-A sloppy data scientist could potentially jeppardize the operation, by giving false conclusions of the 
-collected data by experiements, which could lead to bad decisions of software to implement into the master
+A sloppy data scientist could potentially jeopardize the operation, by giving false conclusions of the 
+collected data by experiments, which could lead to bad decisions of software to implement into the master
 version of the production system.
 
 \section{Conclusions}
@@ -490,10 +491,8 @@ Further section \ref{dis:synery} showed however, that there is additional costs 
 
 
 %ACKNOWLEDGMENTS are optional
-\section{Acknowledgments}
-
-After all Coffee isn't that bad 
-
+\section{Acknowledgements}
+The authors of this paper wants to acknowledge the people whom did the ground research in this field. Further special thank to Associated professor Marco Kuhrmann for guidance. 
 %
 % The following two commands are all you need in the
 % initial runs of your .tex file to
