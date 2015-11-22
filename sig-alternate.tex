@@ -242,11 +242,12 @@ Lean Software Developnment\cite{poppendieck:lean} was developed back in ?? and i
 The following is a short description of the points found in the book \cite{poppendieck:lean}
 
 \paragraph{Eliminate Waste}
-Like Value-Oriented Software Development, Lean does not operate value-neutral. In Lean everything not adding value for the customer is considered wast to be minimized.
+Like Value-Oriented Software Development, Lean does not operate value-neutral. 
+In Lean everything not adding value for the customer is considered waste and has to be minimized.
 Waste is anything which does not directly add value upon the product. 
 
-This is Design diagrams, which is not utilized by the developer or the project manager in any way. 
-It is unused requirements, unused features or features which is not needed right now. 
+This could be Design diagrams, which is not utilized by the developer or the project manager in any way. 
+It is unused requirements, unused features or features which is not needed right now.
 
 Eliminating Waste is generally avoided by looking at each task done in a timeline for a project
 and find any tasks or part of tasks which doesn't bring any value to the product and can be 
@@ -256,25 +257,34 @@ skipped for further processes or projects.
 Amplify Learning is generally described as using the Test Driven Development(TDD) approach in order to 
 get instant feedback on success.
 This means small iterations along with integration testing to quickly test if new features broke anything.
-Though short development cycles, integration tests, re factoring sessions and quick user feedback, Lean development tries to maximize the learning of the project team members. This is done with the assumption that more knowledgeable and competent developers gives a better and faster end product.
+
+Lean development tries to maximize the learning of the project team members. 
+This is done with the assumption that more knowledgeable and competent developers gives a better and 
+faster end product.
 
 \paragraph{Decide as Late as Possible}
 For creative and design based tasks like software development a lot uncertainties are involved. 
 The best approach for efficiency with big uncertainties is to make late decisions in order to have multiple
-options, as not all options are good and there might be better options around. Further, does late decisions give a possibility of having more facts available to base the decision to be made on. 
+options, as not all options are good and there might be better options around. Further, late decisions 
+give a possibility of having more facts available to make the correct decision.
 
-The down side to this is, that the later a risk, uncertainty or problem is handled the bigger the change it enforces on the build system. Further, the higher the dependencies and entanglement between different components the greater is the risk of having to make major changes do to a late decision. This means that complex systems should support that parts of those systems can change in the late process
- of the development without the hassle to implement them.
+The down side to this is, that the later a risk, uncertainty or problem is handled the bigger the change it 
+enforces on the build system. Further, the higher the dependencies and entanglement between different 
+components the greater is the risk of having to make major changes due to a late decision. This means that 
+complex systems should support that parts of those systems can change in the late process
+of the development without the hassle, that complex systems often inherent, to implement them.
 
 \paragraph{Deliver as fast as possible}
 Deliver as fast as possible is partly connected to the Eliminate Waste. 
 Back in time it was more valuable to delay software and increase the quality, along with carefully making 
 the right decisions.
 
-Today it it more valuable to move fast and the cost of software has changed to the cost of human hours. 
+Today it it more valuable to move fast as the cost of software has changed to the cost of human hours. 
 These changes in the field has made it more important to elimate waste and deliver as fast as possible 
 by just fulfilling the required terms.
-As mentioned in \textit{Amplify learning} does Lean have short  development cycles which lowers the time until feedback can be gathered. Through fast feedback Lean Development tries to lower the four general risks seen in Figure \ref{fig:generalrisks}.
+As mentioned in \textit{Amplify learning} Lean Software Development have short development cycles which 
+lowers the time until feedback can be gathered. Through fast feedback Lean Development tries to lower 
+the four general risks seen in Figure \ref{fig:generalrisks}.
 
 \paragraph{Empower the team}
 Empower the Team, is for Lean Software Development the process of enlightning the entire team of the 
@@ -286,19 +296,26 @@ about what they have to do, combined charts which shows how the software is impr
 \paragraph{Build integrity in}
 To Build Integrity in, means that it should be possible to extend the software for future requirements 
 as software generally has to adapt to the moving world and additonally be easy to maintain to reduce waste.
-Lean encourage the developer to do Re-factoring both to amplify learning among the developers, but also to keep the code base clean of unused functionality. In addition, is one of the goals of the re-factoring process to ensure flexibility and lower dependencies in between components and modules.  
-
+Lean Software Development encourage the developer to do refactoring both to amplify learning among the 
+developers, but also to keep the code base clean of unused functionality. 
+Additionally the process of refactoring ensures flexibility and lower dependencies between components 
+and modules.  
 
 \paragraph{See the whole}
-The principle `See the whole` covers how to avoid suboptimality of the software. 
+The principle `See the whole` covers how to avoid suboptimality in software. 
 It is described as developers tend to do the features at which, they are specialized into.
 This leads to parts of the systems being really good and other parts to be suboptimal.
-Lean attempts to reduce suboptimal in a product by standardizing different stages in the iterations and make sure that every team member knows what the focus of this exact stage is. In addition, in bigger project where multiple different teams are working on the same end product intercommunication is highly important. This intercommunications is for ensuring the flexibility and assembly of different components is sufficient. This manifests itself in the Lean saying "Think Big, act small, fail fast and learn rapidly" \cite{poppendieck:lean} 
-
+Lean attempts to reduce suboptimal in a product by standardizing different stages in the iterations and 
+make sure that every team member knows what the focus of this exact stage is. 
+In addition, in bigger project where multiple different teams are working on the same end product, 
+intercommunication is highly important. 
+This intercommunications is used in order to ensure the flexibility and assembly of different components. 
+This manifests itself in the Lean Software Development saying "Think Big, act small, fail fast and learn rapidly" \cite{poppendieck:lean} 
 
 \subsection{Continuous Experimentation}
 The section Continuous Experimentation is mainly grounded in the paper \cite{bowman:reasoning}.
-The development approach is mainly inspired from Lean Development which focus upon the utilization of the budget to earn the most profit.
+The development approach is mainly inspired from Lean Software Development which focus upon 
+the utilization of the budget to earn the most profit.
 
 The Overall concept of Continous Experimentation is to iteratively `Build, Measure Learn` which is
 decomposed into the following processes: 
@@ -331,9 +348,12 @@ In the Hypothesis phase the focus is upon quality metrics which can be measured.
 it it absolute crucial to the whole process that all these quality measures is measureable in order to figure 
 out the value of the experiment, and find a direct statistical connection to it. 
 
-In the Hypothesis the goal of the experiment is being described in measureable terms by these quality measures. 
+In the Hypothesis the goal of the experiment is being described in measureable terms 
+by these quality measures. 
+
 The quality measures is not only software based, but also user experience is put into the hot seat in this 
-phase, just as Lean Software Development\footnote{\label{see-lean}see section \ref{lean}} where waste is reduced, and value is maximized, the only real measureable value is in the end the user experience. 
+phase, just as Lean Software Development\footnote{\label{see-lean}see section \ref{lean}} where waste 
+is reduced, and value is maximized, the only real measureable value is in the end the user experience. 
 
 If the user Experience qualities has totally failed, there is no value to the product and therefore there is 
 no product.
@@ -399,6 +419,7 @@ hypothesis or not which may make it a candidate for the master version in the ne
 
 \subsection{Consequences of Value-oriented Software Development}
 \subsection{Synergy of CX and VoSD}
+
 \subsection{Profit!}
 
 \section{Conclusions}
