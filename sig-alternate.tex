@@ -123,9 +123,23 @@ Contains abstract
 %A category including the fourth, optional field follows...
 \category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
 
-\terms{Continuouse Experimentation}
+\terms{
+  Continuouse Experimentation,
+  Value-oriented Software Development, 
+  Value-based Software Development,
+  Lean Software Development,
+  Continous Delivery
+}
 
-\keywords{Continuouse Experimentation, Value-oriented Software Development, VBSE}
+\keywords{
+  Continuouse Experimentation, 
+  Value-oriented Software Development, 
+  Value-based Software Development,
+  Lean Software Development,
+  Continous Delivery,
+  Software Development,
+  Project Management
+}
 
 \section{Introduction}
 Doing business as a software company now, and expectedly increasingly in the future, needs to deal with increasing rapid changes in technology and competition. For a company to endure these changes in the business environment finding new strategies to distinguish themselves from their competitors is essential.\cite{stefan:valuebased}       
@@ -138,6 +152,7 @@ Throughout the last 60 years of software development, 5 different development pr
 \item \textit{Traditional Development.} Development processes like the waterfall model.
 \item \textit{Agile Development.} Spans over development models like UP, RUP, Scrum, the V-Model and the spiral model.
 \item \textit{Continues Development.} Development processes like Continuous Delivery and Continuous Deployment, which focusses on fast and short development cycles and quick a delivery.
+\item \textit{Lean Software Development.} Development Processs which has become popular as speed has become more imporant. Additionally it focusses on manimizing loss in Software Development.
 \item \textit{Continues Experimentation in value-oriented Software Development.} Development processes focussing on creating a minimal viable product through rapid development/delivery processes much like Continuous development.
 \end{enumerate}
 \label{fig:states}
@@ -213,10 +228,9 @@ Continuous Delivery is a software engineering process focussing on a getting sho
 \label{fig:deliverydeploment}
 \end{figure}
 
-\subsection{Continuous Experimentation}
-The section Continuous Experimentation is mainly grounded in the paper \cite{bowman:reasoning}.
-The development approach is mainly inspired from Lean Development which focus upon the utilization of the budget to earn the most profit.
-\subsubsection{Lean Software Development}
+
+\subsection{Lean Software Development}
+\label{lean}
 Lean Software Developnment\cite{poppendieck:lean} was developed back in ?? and is based upon the following principles
 
 \begin{enumerate}
@@ -279,11 +293,27 @@ The principle `See the whole` covers how to avoid suboptimality of the software.
 It is described as developers tend to the features at which, they are specialized into.
 This leads to part of the systems being really good and other parts to be suboptimal.
 
+\subsection{Continuous Experimentation}
+The section Continuous Experimentation is mainly grounded in the paper \cite{bowman:reasoning}.
+The development approach is mainly inspired from Lean Development which focus upon the utilization of the budget to earn the most profit.
+
+The Overall concept of Continous Experimentation is to iteratively `Build, Measure Learn` which is
+decomposed into the following processes: 
+\begin{enumerate}
+\item Assumption
+\item Hypothesis
+\item Design of Minimal Viable Product
+\item Integration
+\item Feedback
+\item Analyse Data
+\end{enumerate}
+
+An easier view of the process can be found on fig. \ref{fig:continuousdev}
+
 \subsubsection{Assumption}
+\label{cx:assumption}
 The Initial process for continuous experimentation is the Assumption.
 In the Assumption phase an idea is created, which is a change or extension to the current software.
-
-during the assumption the benefits of the 
 
 \begin{figure}
 \centering
@@ -293,20 +323,67 @@ during the assumption the benefits of the
 \end{figure}
 
 \subsubsection{Hypothesis}
-The first step in order to define a task in continuous experimentation is defining the requirements for the experiment to succeed. 
+\label{cx:hypothesis}
+In the Hypothesis phase the focus is upon quality metrics which can be measured.
+it it absolute crucial to the whole process that all these quality measures is measureable in order to figure 
+out the value of the experiment, and find a direct statistical connection to it. 
 
-In order to succeed the experiment has to bring value to the product. In order to measure how well the experiment perform a hypothesis which describe an expected outcome from the experiment.
+In the Hypothesis the goal of the experiment is being described in measureable terms by these quality measures. 
+The quality measures is not only software based, but also user experience is put into the hot seat in this 
+phase, just as Lean Software Development\footnote{\label{see-lean}see section \ref{lean}} where waste is reduced, and value is maximized, the only real measureable value is in the end the user experience. 
 
-The core of the hypothesis has to be quality requirements, which can be tested and verified in order to verify the value of the experiment to the product. 
+If the user Experience qualities has totally failed, there is no value to the product and therefore there is 
+no product.
 
 \subsubsection{Design Minimal Viable Product}
+\label{cx:design}
+The Design of the Minimal Viable Product is usually done fast and tested following a `Test Driven Development`
+approach, to ensure quality and non-breakability. 
+This is a treat inheritated from Lean Software Development\footnotemark[\ref{see-lean}].
+
+\subsubsection{Integration}
+\label{cx:integration}
+In order to use Continous Experimentation it is not sufficient to run only one version of software in 
+production to be successful as it would take too long to test all the parallel experiments which has been
+created and has entered the `Integration` phase. 
+
+There is a number of ways to get around this issue of multiple versions. 
+Either the server can decide which version is offered or the client can decide.
+
+A version should be offered to a subset of the users, meaning not all users will be exposed to the 
+new feature, but enough to show how it affects the software product.
+
+Using only a subset of the users for an experiment also means that multiple experiments can be tested in 
+parallel to different subsets. For some experiements the subsets might be able to handle a intersection of 
+the subsets. 
+
+\subsubsection{Feedback}
+\label{cx:feedback}
+In order to measure anything from the experiments it is crucial to collection user data.
+The whole framework of the software system has to support collection of user data, both in order to see how 
+the software system is doing in general, but also how experiments differences from the current master version.
+
+The collection of data can be very different depending on the case and the product. 
+For a webshop an experiment for a visual new feature could be tracked by collecting data about the amount 
+of transactions made, what the transactions included and a clipmap of there the users clicked on the page.
+
+These information would in contrast to the master version, be easily to distinguish from the statistics if 
+the experiment caused any change.
 
 \subsubsection{Data Analysis}
-Once the minimal viable product has been deployed into production. Users are monitored and data about the users and their behavior is collected for analysis of how the change has affected the product. 
+\label{cx:analyse}
+Once data has been collected over a period of time. The collected data will be used to either accept or reject
+the hypothesis. 
+If the data collected has shown that all the quality measures has been met for the experiemnet, 
+the experiment will be added to the master version as it has added value to the product.
 
-This process require data scientist in order to  analyze the benefits and consequences of the experiment upon the product. 
-
-\subsubsection{Validation}
+On the other hand, if the data collected shows that the experiement has failed to fulfill the hypothesis 
+the assumption will be re-evaluated for one of two things as seen in fig. \ref{fig:validation}. 
+\begin{enumerate}
+\item The Experiment will be archived and will not be used
+\item The Experiment will have changed it hypothesis and can then be re-examined in order to fulfill the new 
+hypothesis or not which may make it a candidate for the master version in the next iteration.
+\end{enumerate}
 
 \begin{figure}
 \centering
